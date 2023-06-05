@@ -60,7 +60,7 @@ if st.button('Get Fruit Load List'):
 # Allow end user to add fruit to list
 def insert_row_snowflake(new_fruit):
     with my_cnx.cursor() as my_cur:
-        my_cur.execute("insert into fruit_load_list values ('" + new_fruit + "')")
+        my_cur.execute("insert into fruit_load_list values ('" + new_fruit.value + "')")
         return "Thanks for adding " + new_fruit
 
 add_my_fruit = st.header('View our fruit list - add your faves!')
