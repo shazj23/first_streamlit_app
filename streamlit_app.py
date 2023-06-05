@@ -63,7 +63,7 @@ def insert_row_snowflake(new_fruit):
         my_cur.execute("insert into fruit_load_list values ('" + new_fruit + "')")
         return "Thanks for adding " + new_fruit
 
-add_my_fruit = st.text_input('View our fruit list - add your faves!')
+add_my_fruit = st.header('View our fruit list - add your faves!')
 if st.button('Get fruit list!'):
     back_from_function = insert_row_snowflake(add_my_fruit)
     st.text(back_from_function)
