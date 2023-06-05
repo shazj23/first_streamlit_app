@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit 
 import pandas
 import requests
 import snowflake.connector
@@ -51,7 +51,7 @@ try:
 
 
 #import snowflake.connector 
-st.header("The fruit load list contains:")
+streamlit.header("The fruit load list contains:")
 #snowflake-related functions
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
