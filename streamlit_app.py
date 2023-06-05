@@ -44,8 +44,9 @@ try:
   else:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
-    
-    streamlit.stop()
+
+streamlit.stop()
+
 import snowflake.connector 
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
@@ -61,5 +62,3 @@ streamlit.write('Thanks for adding ', add_my_fruit)
 
 #this wont work correctly, but go with it for now
 my_cur.execute("insert into fruit_load_list values ('from streamlit')")
-
-
